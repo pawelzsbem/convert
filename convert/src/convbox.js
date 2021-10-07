@@ -12,8 +12,13 @@ class ConvertBox extends React.Component{
     render(){
 
         return <>
-            <label for="inpt">{ this.props.tmprName === "c"? "Celsius" : "Farenheit"}</label>
-            <input type="number" id="inpt" onChange = {(event) => this.props.changeTmpr(event, this.props.tmprName) } value = {this.props.tmprVal} />
+            <fieldset>
+                <legend>insert temperature</legend>
+
+                    <label for="inpt">{ this.props.tmprName === "c"? "Celsius" : "Farenheit"}</label> <br/>
+                    <input type="number" id="inpt" onChange = {(event) => this.props.changeTmpr(event, this.props.tmprName) } value = {this.props.tmprVal} />
+            
+            </fieldset>
             </>
 
     }
